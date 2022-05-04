@@ -8,7 +8,6 @@
 // 	return element;
 // };
 
-import { navbarComponent } from './js/home/home';
+import { homeComponents } from './js/home/home';
 
-document.body.appendChild(navbarComponent());
-console.log('testing if working webpack');
+homeComponents();
