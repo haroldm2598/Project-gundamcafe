@@ -52,6 +52,9 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	background-color: $redColor---2;
 	color: $neutral;
 
@@ -62,6 +65,18 @@ body {
 		justify-content: space-between;
 		align-items: stretch;
 		list-style-type: none;
+
+		// &--li {
+		// 	font-family: 'Roboto', sans-serif;
+		// 	font-size: 1rem;
+		// 	font-weight: 500;
+		// }
+	}
+
+	&__para {
+		font-family: 'Roboto', sans-serif;
+		font-size: 1rem;
+		font-weight: 500;
 	}
 }
 
