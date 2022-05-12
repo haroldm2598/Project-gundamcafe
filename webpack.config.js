@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	mode: 'development',
 	entry: {
-		index: './src/index.js'
+		index: './src/index.js',
+		menuIndex: './src/menuIndex.js'
 	},
 	devtool: 'inline-source-map',
 	devServer: {
@@ -12,7 +13,14 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'Development'
+			filename: 'index.html',
+			template: 'dist/index.html',
+			chunks: ['main']
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'menu.html',
+			template: 'dist/menu.html',
+			chunks: ['menu']
 		})
 	],
 	output: {

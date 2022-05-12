@@ -2,6 +2,7 @@ import '../../styles/main.scss';
 
 export const navbarComponent = () => {
 	const nameArr = ['Home', 'Menu', 'Contact'];
+	const linkArr = ['index.html', 'menu.html', 'contact.html'];
 	const div = document.createElement('div');
 	const ul = document.createElement('ul');
 
@@ -14,7 +15,9 @@ export const navbarComponent = () => {
 
 		anchor.textContent = nameArr[i];
 
-		anchor.setAttribute('href', '#');
+		for (let j = 0; j < linkArr.length; j++) {
+			anchor.setAttribute('href', `${linkArr[i]}`);
+		}
 
 		anchor.classList.add('navbarContainer__ul--anchor');
 		li.classList.add('navbarContainer__ul--li');

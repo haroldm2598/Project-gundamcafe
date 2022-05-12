@@ -90,6 +90,7 @@ body {
 .contentContainer {
 	height: 90vh;
 	padding: 2em 3.5em;
+	margin: 3em 6em 0;
 	display: grid;
 	grid-template-areas:
 		'first second'
@@ -102,12 +103,13 @@ body {
 		&--image {
 			height: 30em;
 			width: 30em;
+			object-fit: cover;
 		}
 	}
 
 	&__second {
 		grid-area: second;
-		margin-left: 1em;
+		margin-left: 5em;
 		font-family: 'Roboto', sans-serif;
 	}
 
@@ -123,6 +125,12 @@ body {
 			color: $neutral;
 			font-size: 1rem;
 			font-weight: 700;
+			cursor: pointer;
+			transition: all 0.25s ease;
+
+			&:hover {
+				background-color: $redColor---2;
+			}
 		}
 	}
 }
