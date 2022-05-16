@@ -111,6 +111,10 @@ body {
 		grid-area: second;
 		margin-left: 5em;
 		font-family: 'Roboto', sans-serif;
+
+		p {
+			line-height: 1.5;
+		}
 	}
 
 	&__third {
@@ -136,17 +140,19 @@ body {
 }
 
 .menuContainer {
-	height: 90vh;
+	height: 100%;
 	padding: 4em 5em;
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1em;
 
 	&__item {
 		display: flex;
 		height: 20em;
-		width: 40em;
+		width: 100%;
 		background-color: $blueColor---2;
-		color: $neutral;
+		color: #000;
 
 		&--img {
 			height: 100%;
@@ -158,6 +164,10 @@ body {
 		&--content {
 			width: 50%;
 			padding: 1em 1.5em;
+
+			p {
+				line-height: 1.5;
+			}
 		}
 	}
 }
