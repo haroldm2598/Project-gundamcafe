@@ -1,10 +1,5 @@
-$neutral: #fff;
-$redColor---1: #4d0511;
-$redColor---2: #c72c39;
-$redColor---3: #ff8789;
-$blueColor---1: #103e8f;
-$blueColor---2: #16b9f5;
-$blueColor---3: #c2e7ff;
+@import './colors';
+@import './mixins';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
@@ -13,6 +8,7 @@ body {
 	margin: 0;
 }
 
+// ----------- RESUABLE COMPONENTS -----------
 .navbarContainer {
 	height: 3.5em;
 	width: 100%;
@@ -87,6 +83,8 @@ body {
 	}
 }
 
+// ----------- HOME COMPONENTS -----------
+
 .contentContainer {
 	height: 90vh;
 	padding: 2em 3.5em;
@@ -137,7 +135,51 @@ body {
 			}
 		}
 	}
+
+	@include laptop-small {
+		height: 100%;
+		padding: 0;
+		margin: 1em;
+
+		&__first {
+			margin: 0;
+		}
+
+		&__second {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	@include tablet {
+		height: 100%;
+		padding: 5em;
+		margin: 1em;
+		grid-template-areas:
+			'first'
+			'second'
+			'button';
+
+		&__first,
+		&__second {
+			margin: 0;
+		}
+
+		&__first {
+			&--image {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__second {
+			font-size: 0.9rem;
+		}
+	}
 }
+
+// ----------- MENU COMPONENTS -----------
 
 .menuContainer {
 	height: 100%;
