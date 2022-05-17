@@ -3,9 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-body {
+* {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 // ----------- RESUABLE COMPONENTS -----------
@@ -38,6 +39,21 @@ body {
 
 			&:hover {
 				color: $redColor---3;
+			}
+		}
+	}
+
+	@include tablet {
+		&__ul {
+			width: 100%;
+			margin: 0;
+			padding: 3.5em 1em 0 0;
+			align-items: flex-end;
+			flex-direction: column;
+			background-color: $blueColor---2;
+
+			&--anchor {
+				color: #000;
 			}
 		}
 	}
@@ -86,9 +102,9 @@ body {
 // ----------- HOME COMPONENTS -----------
 
 .contentContainer {
-	height: 90vh;
+	height: 100%;
 	padding: 2em 3.5em;
-	margin: 3em 6em 0;
+	margin: 3em 2em 0;
 	display: grid;
 	grid-template-areas:
 		'first second'
@@ -96,28 +112,30 @@ body {
 
 	&__first {
 		grid-area: first;
-		margin-right: 1em;
+		// margin-right: 1em;
 
 		&--image {
 			height: 30em;
 			width: 30em;
-			object-fit: cover;
+			object-fit: contain;
 		}
 	}
 
 	&__second {
 		grid-area: second;
-		margin-left: 5em;
+		padding: 2em;
 		font-family: 'Roboto', sans-serif;
 
 		p {
+			margin-top: 1em;
+			margin-right: 3em;
 			line-height: 1.5;
 		}
 	}
 
 	&__third {
 		grid-area: button;
-		margin: 0 auto;
+		margin: 1em auto;
 
 		&--button {
 			padding: 0.8em 3.5em;
@@ -148,6 +166,11 @@ body {
 		&__second {
 			margin: 0;
 			padding: 0;
+
+			p {
+				margin: 0;
+				padding: 0;
+			}
 		}
 	}
 
@@ -174,7 +197,17 @@ body {
 		}
 
 		&__second {
+			margin-top: 1em;
 			font-size: 0.9rem;
+
+			p {
+				margin-top: 1em;
+				padding: 0;
+			}
+		}
+
+		&__third {
+			margin-top: 1em;
 		}
 	}
 }

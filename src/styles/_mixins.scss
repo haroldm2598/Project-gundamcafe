@@ -1,11 +1,11 @@
 @mixin mobile-small {
-	@media (min-width: 20em) and (max-width: 23.4375em) {
+	@media (max-width: 20em) {
 		@content;
 	}
 }
 
-@mixin mobile {
-	@media (min-width: 20em) and (max-width: 26.5625em) {
+@mixin mobile-medium {
+	@media (min-width: 20em) and (max-width: 23.4375em) {
 		@content;
 	}
 }
