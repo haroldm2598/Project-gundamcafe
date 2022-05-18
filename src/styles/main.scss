@@ -18,6 +18,10 @@
 	background-color: $redColor---2;
 	color: $neutral;
 
+	&__menuBars {
+		display: none;
+	}
+
 	&__ul {
 		padding: 0.6em 0;
 		margin: 0 22em;
@@ -43,14 +47,30 @@
 		}
 	}
 
-	@include tablet {
+	@include laptop-small {
 		&__ul {
+			margin: 0 11em;
+		}
+	}
+
+	@include tablet {
+		&__menuBars {
+			padding: 0.5em 1em;
+			display: flex;
+			justify-content: flex-end;
+			fill: $neutral;
+			cursor: pointer;
+		}
+
+		&__ul {
+			// display: none;
 			width: 100%;
 			margin: 0;
-			padding: 3.5em 1em 0 0;
+			padding: 2em 1em 1em 0;
 			align-items: flex-end;
 			flex-direction: column;
-			background-color: $blueColor---2;
+			background-color: $redColor---2;
+			z-index: 100;
 
 			&--anchor {
 				color: #000;
@@ -157,7 +177,7 @@
 	@include laptop-small {
 		height: 100%;
 		padding: 0;
-		margin: 1em;
+		margin: 2em;
 
 		&__first {
 			margin: 0;
@@ -193,6 +213,7 @@
 				height: 100%;
 				width: 100%;
 				object-fit: cover;
+				z-index: 1;
 			}
 		}
 
