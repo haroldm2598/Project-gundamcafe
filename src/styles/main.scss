@@ -84,6 +84,14 @@ body {
 			display: none;
 		}
 	}
+
+	@include mobile-large {
+		&__ul {
+			&--li {
+				font-size: 1rem;
+			}
+		}
+	}
 }
 
 .footerContainer {
@@ -123,6 +131,27 @@ body {
 		font-family: 'Roboto', sans-serif;
 		font-size: 1rem;
 		font-weight: 500;
+	}
+
+	@include mobile-large {
+		height: 100%;
+		width: 100%;
+		padding: 1em 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&__ul {
+			padding: 0;
+		}
+
+		& > * {
+			margin-bottom: 1em;
+		}
+
+		&__para {
+			font-size: 1.2rem;
+		}
 	}
 }
 
@@ -236,6 +265,53 @@ body {
 
 		&__third {
 			margin-top: 1em;
+		}
+	}
+
+	@include mobile-large {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		grid-template-areas:
+			'first'
+			'second'
+			'button';
+
+		// &__first,
+		// &__second {
+		// 	margin: 0;
+		// 	padding: 0;
+		// }
+
+		// & > * {
+		// 	margin: 0;
+		// 	padding: 0;
+		// }
+
+		&:not(:last-child) {
+			margin: 0;
+			padding: 0;
+			background: pink;
+		}
+
+		// &:not(:last-child) {
+		// 	margin: 0;
+		// 	padding: 0;
+		// }
+
+		&__first {
+			&--image {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__second {
+			p {
+				margin: 0;
+				padding: 0;
+			}
 		}
 	}
 }
