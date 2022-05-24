@@ -9,10 +9,6 @@
 	box-sizing: border-box;
 }
 
-body {
-	position: relative;
-}
-
 // ----------- RESUABLE COMPONENTS -----------
 .navbarContainer {
 	height: 3.5em;
@@ -21,7 +17,6 @@ body {
 	padding: 0;
 	background-color: $redColor---2;
 	color: $neutral;
-	z-index: 99999;
 
 	&__menuBars {
 		display: none;
@@ -34,6 +29,8 @@ body {
 		justify-content: space-around;
 		align-items: stretch;
 		list-style-type: none;
+		position: relative;
+		z-index: 5;
 
 		&--li {
 			font-family: 'Roboto', sans-serif;
@@ -161,13 +158,6 @@ body {
 	}
 
 	@include mobile-large {
-		height: 100%;
-		width: 100%;
-		padding: 1em 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
 		&__ul {
 			padding: 0;
 		}
@@ -179,6 +169,15 @@ body {
 		&__para {
 			font-size: 1.2rem;
 		}
+	}
+
+	@include mobile-allSize {
+		height: 100%;
+		width: 100%;
+		padding: 1em 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
@@ -192,7 +191,6 @@ body {
 	grid-template-areas:
 		'first second'
 		'button button';
-	z-index: 1;
 
 	&__first {
 		grid-area: first;
@@ -202,6 +200,8 @@ body {
 			height: 30em;
 			width: 30em;
 			object-fit: contain;
+			position: relative;
+			z-index: 1;
 		}
 	}
 
@@ -296,6 +296,28 @@ body {
 	}
 
 	@include mobile-large {
+		&:not(:last-child) {
+			margin: 0;
+			padding: 0;
+		}
+
+		&__first {
+			&--image {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__second {
+			p {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	@include mobile-allSize {
 		height: 100%;
 		margin: 0;
 		padding: 0;
@@ -304,16 +326,9 @@ body {
 			'second'
 			'button';
 
-		// &__first,
-		// &__second {
-		// 	margin: 0;
-		// 	padding: 0;
-		// }
-
-		&:not(:last-child) {
+		&__first,
+		&__second {
 			margin: 0;
-			padding: 0;
-			background: pink;
 		}
 
 		&__first {
@@ -359,9 +374,15 @@ body {
 
 		&--content {
 			width: 50%;
-			padding: 1em 1.5em;
+			padding: 3em 1.5em;
+
+			h3 {
+				font-size: 1.5rem;
+				margin-bottom: 1em;
+			}
 
 			p {
+				font-size: 1.25rem;
 				line-height: 1.5;
 			}
 		}
