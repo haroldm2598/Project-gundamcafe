@@ -26,7 +26,6 @@ export const contentComponents = () => {
 		const div1 = document.createElement('div');
 		const div2 = document.createElement('div');
 		const div3 = document.createElement('div');
-		const image = document.createElement('img');
 		const h3 = document.createElement('h3');
 		const para = document.createElement('p');
 
@@ -34,12 +33,19 @@ export const contentComponents = () => {
 		div2.classList.add('menuContainer__item--img');
 		div3.classList.add('menuContainer__item--content');
 
+		(async () => {
+			let getImg = await getImage();
+			const testingImg = new Image();
+
+			testingImg.src = getImg;
+			div2.appendChild(testingImg);
+		})();
+
 		h3.textContent = data[i].title;
 		para.textContent = data[i].about;
 
 		div1.appendChild(div2);
 		div1.appendChild(div3);
-		div2.appendChild(image);
 		div3.appendChild(h3);
 		div3.appendChild(para);
 		div.appendChild(div1);

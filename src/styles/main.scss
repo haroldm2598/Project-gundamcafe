@@ -362,28 +362,73 @@
 		display: flex;
 		height: 20em;
 		width: 100%;
-		background-color: $blueColor---2;
 		color: #000;
 
 		&--img {
-			height: 100%;
-			width: 50%;
+			height: 20em;
+			width: 20em;
 			background-color: #000;
-			object-fit: contain;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
 		}
 
 		&--content {
 			width: 50%;
-			padding: 3em 1.5em;
+			padding: 2em 1em;
 
 			h3 {
 				font-size: 1.5rem;
-				margin-bottom: 1em;
+				margin-bottom: 0.5em;
 			}
 
 			p {
 				font-size: 1.25rem;
-				line-height: 1.5;
+			}
+		}
+	}
+
+	@include laptop-small {
+		padding: 1em;
+	}
+
+	@include tablet {
+		padding: 2em 1em;
+		grid-template-columns: 1fr;
+
+		&__item {
+			&--content {
+				h3 {
+					margin-bottom: 1em;
+				}
+
+				p {
+					line-height: 1.5;
+				}
+			}
+		}
+	}
+
+	@include mobile-allSize {
+		padding: 1em 0.5em;
+		grid-template-columns: 1fr;
+		grid-template-rows: 2fr;
+
+		&__item {
+			height: 30em;
+			flex-direction: column;
+
+			&--img {
+				height: 20em;
+				width: 100%;
+			}
+
+			&--content {
+				width: 100%;
+				padding: 1em;
 			}
 		}
 	}
