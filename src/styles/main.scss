@@ -433,3 +433,24 @@
 		}
 	}
 }
+
+// ----------- CONTACT COMPONENTS -----------
+
+.contactContainer {
+	height: 100vh;
+	width: 100%;
+	padding: 2em 1em;
+	display: flex;
+
+	&__mapSection {
+		height: 40em;
+		width: 40em;
+		background-color: #000;
+	}
+
+	&__contactSection {
+		height: 40em;
+		width: 40em;
+		background-color: $blueColor---1;
+	}
+}

@@ -5,7 +5,8 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		index: './src/index.js',
-		menuIndex: './src/menuIndex.js'
+		menuIndex: './src/menuIndex.js',
+		contactIndex: './src/contactIndex.js'
 	},
 	devtool: 'inline-source-map',
 	devServer: {
@@ -21,6 +22,11 @@ module.exports = {
 			filename: 'menu.html',
 			template: 'dist/menu.html',
 			chunks: ['menu']
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'contact.html',
+			template: 'dist/contact.html',
+			chunks: ['contact']
 		})
 	],
 	output: {

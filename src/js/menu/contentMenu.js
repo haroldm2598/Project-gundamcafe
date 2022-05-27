@@ -12,14 +12,6 @@ export const contentComponents = () => {
 	const div = document.createElement('div');
 	const data = json.details;
 
-	// (async () => {
-	// 	let getImg = await getImage();
-	// 	const testingImg = new Image();
-
-	// 	testingImg.src = getImg;
-	// 	div.appendChild(testingImg);
-	// })();
-
 	div.classList.add('menuContainer');
 
 	for (let i = 0; i < data.length; i++) {
