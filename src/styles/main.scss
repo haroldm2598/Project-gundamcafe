@@ -441,16 +441,29 @@
 	width: 100%;
 	padding: 2em 1em;
 	display: flex;
+	justify-content: center;
 
 	&__mapSection {
-		height: 40em;
-		width: 40em;
+		height: 35em;
+		width: 35em;
 		background-color: #000;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&__contactSection {
-		height: 40em;
-		width: 40em;
-		background-color: $blueColor---1;
+		height: 35em;
+		width: 35em;
+		background-color: $blueColor---2;
+
+		&--list {
+			margin: 2em;
+			list-style: none;
+			font-size: 1.5rem;
+		}
 	}
 }
