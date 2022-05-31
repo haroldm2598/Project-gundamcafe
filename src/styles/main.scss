@@ -194,12 +194,11 @@
 
 	&__first {
 		grid-area: first;
-		// margin-right: 1em;
 
 		&--image {
 			height: 30em;
 			width: 30em;
-			object-fit: contain;
+			object-fit: cover;
 			position: relative;
 			z-index: 1;
 		}
@@ -442,28 +441,74 @@
 	padding: 2em 1em;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	&__mapSection {
 		height: 35em;
 		width: 35em;
 		background-color: #000;
 
-		img {
+		&--image {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+		}
+
+		@include tablet {
+			height: 100%;
+			width: 100%;
+		}
+
+		@include mobile-allSize {
+			height: 100%;
+			width: 100%;
 		}
 	}
 
 	&__contactSection {
 		height: 35em;
 		width: 35em;
-		background-color: $blueColor---2;
 
 		&--list {
-			margin: 2em;
+			height: 100%;
+			padding: 4em 1em;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			font-size: 1.9rem;
 			list-style: none;
-			font-size: 1.5rem;
+
+			&__item {
+				color: $fontColor---1;
+				align-items: flex-start;
+			}
+
+			@include laptop-small {
+				padding: 1em;
+			}
+
+			@include tablet {
+				padding: 1em;
+				font-size: 1.5rem;
+			}
+
+			@include mobile-allSize {
+				padding: 0;
+				font-size: 1.2rem;
+			}
 		}
+
+		@include mobile-allSize {
+			width: 100%;
+		}
+	}
+
+	@include tablet {
+		padding: 1em;
+	}
+
+	@include mobile-allSize {
+		flex-direction: column;
+		padding: 1em;
 	}
 }

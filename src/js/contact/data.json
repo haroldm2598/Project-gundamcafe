@@ -1,9 +1,5 @@
 {
-	"test": [
-		{
-			"address": "239, st joseph square urdonisan",
-			"email": "caffeein_whey@yahho.com",
-			"phoneNumber": "+69 8745 4653 154"
-		}
-	]
+	"Address": "239, st joseph square urdonisan",
+	"Email": "caffeein_whey@yahoo.com",
+	"Phone number": "+69 8745 4653 154"
 }

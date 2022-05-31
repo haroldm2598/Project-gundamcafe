@@ -1,5 +1,5 @@
 import '../../styles/main.scss';
-import gundamImage from '../../images/homeGundam.jpg';
+import photoSave from '../../images/resturant.jpg';
 
 export const contentComponents = () => {
 	const div = document.createElement('div');
@@ -12,7 +12,7 @@ export const contentComponents = () => {
 
 	const myImage = new Image();
 
-	myImage.src = gundamImage;
+	myImage.src = photoSave;
 	h1.textContent = 'Gundam Cafe';
 	para.textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 		Donec facilisis massa eget mauris dictum ultrices in id 

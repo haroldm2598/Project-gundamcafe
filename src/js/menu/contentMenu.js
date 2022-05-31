@@ -6,8 +6,7 @@ import json from './data.json';
 export const contentComponents = () => {
 	const clientId = 'rYIji7X0Fh9YOV1m8NBErYTgqLoNB9bnE18d0HP_VlU';
 	const url =
-		'https://api.unsplash.com/search/photos?query=restaurant&client_id=' +
-		clientId;
+		'https://api.unsplash.com/search/photos?query=food&client_id=' + clientId;
 
 	const div = document.createElement('div');
 	const data = json.details;
