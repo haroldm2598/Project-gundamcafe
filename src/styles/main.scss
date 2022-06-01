@@ -108,6 +108,8 @@
 			background-color: $redColor---2;
 
 			&--anchor {
+				margin: 0.5em 0;
+				font-size: 1.5rem;
 				color: $neutral;
 			}
 		}
@@ -452,6 +454,11 @@
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+
+			@include mobile-allSize {
+				height: 100%;
+				width: 100%;
+			}
 		}
 
 		@include tablet {
